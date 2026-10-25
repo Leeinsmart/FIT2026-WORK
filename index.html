@@ -21,6 +21,13 @@ h2{font-size:16px;color:var(--navy);margin:22px 0 8px;padding-left:10px;border-l
 .p-done{background:#E3F1E7;color:var(--green)}
 .p-wait{background:#EEE;color:#555}
 .card b{color:var(--navy)}
+/* 待辦卡：一排橫向滑動，不吃直向空間 */
+.rail{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 8px;margin:0 -2px;-webkit-overflow-scrolling:touch}
+.rail .card{flex:0 0 72%;max-width:260px;scroll-snap-align:start;margin:0;padding:10px 12px;display:flex;flex-direction:column;gap:4px}
+.rail .card .pill{align-self:flex-start;margin:0}
+.rail .card b{font-size:15px;line-height:1.35}
+.rail .card .src{margin:0}
+@media(min-width:600px){.rail .card{flex-basis:240px}}
 .card .next{margin:4px 0 0;color:#333}
 .card .src{margin:2px 0 0;font-size:12px;color:#777}
 .card .src a{color:#777}
@@ -60,10 +67,12 @@ pre .n{color:#AAA;display:inline-block;width:2.2em}
 <p class="sub">對話記錄讀到 2026-10-25 16:24（LINE 群「青年局網站架設」第 25 行）</p>
 
 <h2>現在球在誰手上</h2>
-<div class="card"><div class="row"><span class="pill p-them">等對方</span><div><b>確認原型的點擊</b><p class="src">10-25 16:23 已給網址 · <a href="#line-13">LINE 13</a></p></div></div></div>
-<div class="card"><div class="row"><span class="pill p-them">等對方</span><div><b>上傳 17 項素材到 Drive</b><p class="src">到齊狀況見下方 · <a href="#line-13">LINE 13</a></p></div></div></div>
-<div class="card"><div class="row"><span class="pill p-them">等對方</span><div><b>答 7 題執行問題</b><p class="src">填在試算表第二分頁 · <a href="#line-13">LINE 13</a></p></div></div></div>
-<div class="card"><div class="row"><span class="pill p-wait">等上面填完</span><div><b>通電話確認</b><p class="src">10-25 16:24 約定 · <a href="#line-25">LINE 25</a></p></div></div></div>
+<div class="rail">
+<div class="card"><span class="pill p-them">等對方</span><b>確認原型的點擊</b><p class="src">10-25 16:23 已給網址 · <a href="#line-13">LINE 13</a></p></div>
+<div class="card"><span class="pill p-them">等對方</span><b>上傳 17 項素材到 Drive</b><p class="src">到齊狀況見下方 · <a href="#line-13">LINE 13</a></p></div>
+<div class="card"><span class="pill p-them">等對方</span><b>答 7 題執行問題</b><p class="src">填在試算表第二分頁 · <a href="#line-13">LINE 13</a></p></div>
+<div class="card"><span class="pill p-wait">等上面填完</span><b>通電話確認</b><p class="src">10-25 16:24 約定 · <a href="#line-25">LINE 25</a></p></div>
+</div>
 
 <h2>對方的資料到齊了沒</h2>
 <div class="card">
@@ -126,7 +135,7 @@ pre .n{color:#AAA;display:inline-block;width:2.2em}
 <div class="card"><div class="row"><span class="pill p-done">完成</span><div><b>收到對方的 brief</b><p class="next">Sabina 10-25 15:46 給的 Google 簡報，10 頁：網站架構、首頁、藝術家專頁、作品專頁、連結邏輯、雙語、視覺方向。</p><p class="src">出處：<a href="#line-9">LINE 第 9 行</a></p></div></div></div>
 </details>
 <details class="fold">
-<summary>時間軸 4 則</summary>
+<summary>里程碑 Milestone 4 則</summary>
 <div class="card">
 <ul class="tl">
 <li><span class="d">10-25 14:41</span><span>Kissun 建 LINE 群「青年局網站架設」，說可以先通話</span></li>
