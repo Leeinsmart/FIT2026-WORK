@@ -6,20 +6,21 @@
 <meta name="robots" content="noindex">
 <title>File in Taipei 工作狀態</title>
 <style>
-:root{--navy:#1F3A6B;--pink:#F3DCE3;--blue:#DCEAF5;--cream:#FAF8F2;--mag:#A83A6B;--ink:#222;--line:#D9D4C7;--green:#2E7D4F}
+/* 配色：黑白灰紅 */
+:root{--navy:#111111;--pink:#FBE9EB;--blue:#EDEDED;--cream:#F3F3F3;--mag:#C8102E;--ink:#1A1A1A;--line:#DDDDDD;--green:#555555}
 *{box-sizing:border-box}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:"PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif;line-height:1.6;font-size:15px}
 .wrap{max-width:760px;margin:0 auto;padding:12px 16px 48px}
 h1{font-size:20px;color:var(--navy);margin:8px 0 2px}
 .sub{color:#666;font-size:13px;margin:0 0 14px}
-h2{font-size:16px;color:var(--navy);margin:22px 0 8px;padding-left:10px;border-left:4px solid var(--navy)}
+h2{font-size:16px;color:var(--navy);margin:22px 0 8px;padding-left:10px;border-left:4px solid var(--mag)}
 .card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:8px 0}
 .row{display:flex;gap:10px;align-items:flex-start}
 .pill{flex:0 0 auto;font-size:12px;font-weight:700;padding:2px 8px;border-radius:12px;white-space:nowrap;margin-top:2px}
-.p-them{background:var(--pink);color:var(--mag)}
-.p-us{background:var(--blue);color:var(--navy)}
-.p-done{background:#E3F1E7;color:var(--green)}
-.p-wait{background:#EEE;color:#555}
+.p-them{background:var(--mag);color:#fff}
+.p-us{background:var(--navy);color:#fff}
+.p-done{background:#E6E6E6;color:#666}
+.p-wait{background:#E6E6E6;color:#444}
 .card b{color:var(--navy)}
 /* 待辦卡：一排橫向滑動，不吃直向空間 */
 .rail{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 8px;margin:0 -2px;-webkit-overflow-scrolling:touch}
@@ -31,7 +32,9 @@ h2{font-size:16px;color:var(--navy);margin:22px 0 8px;padding-left:10px;border-l
 .card .next{margin:4px 0 0;color:#333}
 .card .src{margin:2px 0 0;font-size:12px;color:#777}
 .card .src a{color:#777}
-a{color:var(--navy)}
+a{color:var(--ink)}
+.links a{color:var(--ink)}
+.links a:hover{color:var(--mag)}
 ul.check{list-style:none;padding:0;margin:0}
 ul.check li{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px dashed var(--line)}
 ul.check li:last-child{border-bottom:0}
@@ -66,7 +69,7 @@ pre .n{color:#AAA;display:inline-block;width:2.2em}
 <h1>臺北資料夾 File in Taipei 2026｜工作狀態</h1>
 <p class="sub">對話記錄讀到 2026-10-25 16:24（LINE 群「青年局網站架設」第 25 行）</p>
 
-<h2>現在球在誰手上</h2>
+<h2>未決議題</h2>
 <div class="rail">
 <div class="card"><span class="pill p-them">等對方</span><b>確認原型的點擊</b><p class="src">10-25 16:23 已給網址 · <a href="#line-13">LINE 13</a></p></div>
 <div class="card"><span class="pill p-them">等對方</span><b>上傳 17 項素材到 Drive</b><p class="src">到齊狀況見下方 · <a href="#line-13">LINE 13</a></p></div>
