@@ -22,7 +22,7 @@ h2{font-size:16px;color:var(--navy);margin:22px 0 8px;padding-left:10px;border-l
 .p-wait{background:#EEE;color:#555}
 .card b{color:var(--navy)}
 .card .next{margin:4px 0 0;color:#333}
-.card .src{margin:4px 0 0;font-size:12px;color:#777}
+.card .src{margin:2px 0 0;font-size:12px;color:#777}
 .card .src a{color:#777}
 a{color:var(--navy)}
 ul.check{list-style:none;padding:0;margin:0}
@@ -39,6 +39,13 @@ ul.check li.on label{color:#999;text-decoration:line-through}
 .links small{color:#777;margin-left:6px}
 details{margin-top:8px}
 summary{cursor:pointer;color:var(--navy);font-weight:700}
+details.fold{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+details.fold summary{color:#666;font-weight:600;font-size:14px}
+details.fold[open] summary{margin-bottom:6px}
+details.fold .card{border:0;border-top:1px dashed var(--line);border-radius:0;margin:0;padding:10px 0}
+details.done-fold{margin:6px 0 0;padding:0;border:0;background:none}
+details.done-fold summary{font-size:13px;color:#888;font-weight:600}
+details.done-fold ul.check li label{color:#999;text-decoration:line-through}
 pre{white-space:pre-wrap;font-size:13px;line-height:1.5;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px;color:#333}
 pre .n{color:#AAA;display:inline-block;width:2.2em}
 .tl{margin:0;padding:0;list-style:none}
@@ -53,15 +60,10 @@ pre .n{color:#AAA;display:inline-block;width:2.2em}
 <p class="sub">對話記錄讀到 2026-10-25 16:24（LINE 群「青年局網站架設」第 25 行）</p>
 
 <h2>現在球在誰手上</h2>
-<div class="card"><div class="row"><span class="pill p-them">等對方</span><div><b>確認原型的點擊交互是不是他們 brief 要的</b><p class="next">Lee 10-25 16:23 把原型網址丟進群，請對方比對 brief 裡提到的點擊。</p><p class="src">出處：<a href="#line-13">LINE 第 13 行</a></p></div></div></div>
-<div class="card"><div class="row"><span class="pill p-them">等對方</span><div><b>準備並上傳素材（資料提供清單第一分頁，17 項）</b><p class="next">文字、大頭貼、作品圖、影片、視覺素材與 logo，各自傳到 Drive 對應資料夾。到齊狀況見下方清單。</p><p class="src">出處：<a href="#line-13">LINE 第 13 行</a></p></div></div></div>
-<div class="card"><div class="row"><span class="pill p-them">等對方</span><div><b>回答 7 題執行問題（資料提供清單第二分頁）</b><p class="next">直接填在試算表「要問的問題」分頁的回答欄。</p><p class="src">出處：<a href="#line-13">LINE 第 13 行</a></p></div></div></div>
-<div class="card"><div class="row"><span class="pill p-wait">等上面填完</span><div><b>通電話確認</b><p class="next">Lee 10-25 16:24：三件都填完後再通電話。對方 Kissun 14:41 說進場趕工中，Sabina 15:46 說人在外面。</p><p class="src">出處：<a href="#line-25">LINE 第 25 行</a>、<a href="#line-4">第 4 行</a>、<a href="#line-9">第 9 行</a></p></div></div></div>
-
-<h2>做完的</h2>
-<div class="card"><div class="row"><span class="pill p-done">完成</span><div><b>點擊原型上線</b><p class="next">https://leeinsmart.github.io/FIT2026-PROTO/ ，中英合併同一頁、索引卡縮圖，8 位藝術家與 10 件作品用示意資料。</p></div></div></div>
-<div class="card"><div class="row"><span class="pill p-done">完成</span><div><b>Drive 收資料夾與資料提供清單</b><p class="next">WORK／File in Taipei 下 6 個子資料夾，作品圖再分 W01 到 W10；清單每一項都連到對應資料夾。</p></div></div></div>
-<div class="card"><div class="row"><span class="pill p-done">完成</span><div><b>收到對方的 brief</b><p class="next">Sabina 10-25 15:46 給的 Google 簡報，10 頁：網站架構、首頁、藝術家專頁、作品專頁、連結邏輯、雙語、視覺方向。</p><p class="src">出處：<a href="#line-9">LINE 第 9 行</a></p></div></div></div>
+<div class="card"><div class="row"><span class="pill p-them">等對方</span><div><b>確認原型的點擊</b><p class="src">10-25 16:23 已給網址 · <a href="#line-13">LINE 13</a></p></div></div></div>
+<div class="card"><div class="row"><span class="pill p-them">等對方</span><div><b>上傳 17 項素材到 Drive</b><p class="src">到齊狀況見下方 · <a href="#line-13">LINE 13</a></p></div></div></div>
+<div class="card"><div class="row"><span class="pill p-them">等對方</span><div><b>答 7 題執行問題</b><p class="src">填在試算表第二分頁 · <a href="#line-13">LINE 13</a></p></div></div></div>
+<div class="card"><div class="row"><span class="pill p-wait">等上面填完</span><div><b>通電話確認</b><p class="src">10-25 16:24 約定 · <a href="#line-25">LINE 25</a></p></div></div></div>
 
 <h2>對方的資料到齊了沒</h2>
 <div class="card">
@@ -116,7 +118,15 @@ pre .n{color:#AAA;display:inline-block;width:2.2em}
 </ul>
 </div>
 
-<h2>時間軸</h2>
+<h2>已經過去的</h2>
+<details class="fold">
+<summary>做完的 3 件</summary>
+<div class="card"><div class="row"><span class="pill p-done">完成</span><div><b>點擊原型上線</b><p class="next">https://leeinsmart.github.io/FIT2026-PROTO/ ，中英合併同一頁、索引卡縮圖，8 位藝術家與 10 件作品用示意資料。</p></div></div></div>
+<div class="card"><div class="row"><span class="pill p-done">完成</span><div><b>Drive 收資料夾與資料提供清單</b><p class="next">WORK／File in Taipei 下 6 個子資料夾，作品圖再分 W01 到 W10；清單每一項都連到對應資料夾。</p></div></div></div>
+<div class="card"><div class="row"><span class="pill p-done">完成</span><div><b>收到對方的 brief</b><p class="next">Sabina 10-25 15:46 給的 Google 簡報，10 頁：網站架構、首頁、藝術家專頁、作品專頁、連結邏輯、雙語、視覺方向。</p><p class="src">出處：<a href="#line-9">LINE 第 9 行</a></p></div></div></div>
+</details>
+<details class="fold">
+<summary>時間軸 4 則</summary>
 <div class="card">
 <ul class="tl">
 <li><span class="d">10-25 14:41</span><span>Kissun 建 LINE 群「青年局網站架設」，說可以先通話</span></li>
@@ -125,10 +135,9 @@ pre .n{color:#AAA;display:inline-block;width:2.2em}
 <li><span class="d">10-25 16:24</span><span>Lee：都填完後再通電話</span></li>
 </ul>
 </div>
-
-<h2>LINE 對話原文</h2>
-<details>
-<summary>青年局網站架設（25 行，2026-10-25）</summary>
+</details>
+<details class="fold" id="log-fold">
+<summary>LINE 對話原文 25 行（到 10-25 16:24）</summary>
 <pre id="line-log"></pre>
 </details>
 </div>
@@ -167,13 +176,30 @@ document.getElementById('line-log').innerHTML = LOG.split('\n').map((l, i) => `<
 const KEY = 'fit2026-work-state';
 let state = {};
 try { state = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { state = {}; }
-document.querySelectorAll('ul.check li').forEach(li => {
-  const k = li.dataset.k, cb = li.querySelector('input');
-  cb.checked = !!state[k]; li.classList.toggle('on', cb.checked);
-  cb.addEventListener('change', () => {
-    state[k] = cb.checked; li.classList.toggle('on', cb.checked);
-    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+/* 勾過的沉到清單尾端的折疊區，開頁只看還沒到的 */
+document.querySelectorAll('ul.check').forEach(ul => {
+  const fold = document.createElement('details'); fold.className = 'done-fold';
+  const sum = document.createElement('summary'); fold.appendChild(sum);
+  const doneUl = document.createElement('ul'); doneUl.className = 'check'; fold.appendChild(doneUl);
+  ul.after(fold);
+  const items = [...ul.querySelectorAll('li')];
+  const label = ul.id === 'questions' ? '答了' : '收到了';
+  const place = () => {
+    items.forEach(li => (li.querySelector('input').checked ? doneUl : ul).appendChild(li));
+    const n = doneUl.children.length;
+    sum.textContent = `${label} ${n} 項，還差 ${items.length - n} 項`;
+    fold.style.display = n ? '' : 'none';
+  };
+  items.forEach(li => {
+    const k = li.dataset.k, cb = li.querySelector('input');
+    cb.checked = !!state[k]; li.classList.toggle('on', cb.checked);
+    cb.addEventListener('change', () => {
+      state[k] = cb.checked; li.classList.toggle('on', cb.checked);
+      try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+      place();
+    });
   });
+  place();
 });
 </script>
 <!--mv-pagecount v1-->
