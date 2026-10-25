@@ -29,6 +29,13 @@ h2{font-size:16px;color:var(--navy);margin:22px 0 8px;padding-left:10px;border-l
 .rail .card b{font-size:15px;line-height:1.35}
 .rail .card .src{margin:0}
 @media(min-width:600px){.rail .card{flex-basis:240px}}
+/* 連結與檔案：最新在最左，每張一個大圖示 */
+.rail.files .file{flex:0 0 150px;scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;gap:6px}
+.rail.files .file svg{width:48px;height:48px;fill:none;stroke:var(--ink);stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round;color:var(--mag)}
+.rail.files .file b{font-size:14px;line-height:1.35;color:var(--ink)}
+.rail.files .file small{font-size:12px;color:#777}
+.rail.files .file:hover{border-color:var(--mag)}
+.rail.files .file:hover svg{stroke:var(--mag)}
 .card .next{margin:4px 0 0;color:#333}
 .card .src{margin:2px 0 0;font-size:12px;color:#777}
 .card .src a{color:#777}
@@ -107,12 +114,20 @@ pre .n{color:#AAA;display:inline-block;width:2.2em}
 </ul>
 </div>
 
-<h2>連結</h2>
-<div class="card links">
-<a href="https://leeinsmart.github.io/FIT2026-PROTO/" target="_blank" rel="noopener">點擊原型<small>公開網址，給對方看的</small></a>
-<a href="https://docs.google.com/spreadsheets/d/1M2pSF9647OHLvbhn5NJ6_OXxbb8x2NO7/edit" target="_blank" rel="noopener">資料提供清單與問題表<small>Google Drive，對方填的那份</small></a>
-<a href="https://drive.google.com/drive/folders/1FuUXwMWKWWYe3xkhNiIh-hstNVUlNaYw" target="_blank" rel="noopener">Drive 收資料夾 File in Taipei<small>WORK 底下</small></a>
-<a href="https://docs.google.com/presentation/d/1FpS0Opng4YI8T2NWMV4Mo2HhBqbz1OmOAjrcbGAQqdg/edit?usp=sharing" target="_blank" rel="noopener">對方的 brief（Google 簡報）<small>Sabina 10-25 15:46 給的</small></a>
+<h2>連結與檔案</h2>
+<div class="rail files">
+<a class="file" href="https://docs.google.com/spreadsheets/d/1M2pSF9647OHLvbhn5NJ6_OXxbb8x2NO7/edit" target="_blank" rel="noopener">
+  <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="6" width="32" height="36" rx="3"/><line x1="8" y1="18" x2="40" y2="18"/><line x1="8" y1="27" x2="40" y2="27"/><line x1="8" y1="36" x2="40" y2="36"/><line x1="20" y1="18" x2="20" y2="42"/></svg>
+  <b>資料提供清單與問題表</b><small>Google 試算表 · 10-25</small></a>
+<a class="file" href="https://leeinsmart.github.io/FIT2026-PROTO/" target="_blank" rel="noopener">
+  <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><ellipse cx="24" cy="24" rx="7" ry="17"/><line x1="7" y1="24" x2="41" y2="24"/><line x1="10" y1="15" x2="38" y2="15"/><line x1="10" y1="33" x2="38" y2="33"/></svg>
+  <b>點擊原型</b><small>網站 · 10-25</small></a>
+<a class="file" href="https://docs.google.com/presentation/d/1FpS0Opng4YI8T2NWMV4Mo2HhBqbz1OmOAjrcbGAQqdg/edit?usp=sharing" target="_blank" rel="noopener">
+  <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="9" width="38" height="26" rx="3"/><rect x="12" y="16" width="24" height="12" fill="currentColor" stroke="none" opacity=".25"/><line x1="24" y1="35" x2="24" y2="42"/><line x1="16" y1="42" x2="32" y2="42"/></svg>
+  <b>對方的 brief</b><small>Google 簡報 · 10-25 15:46</small></a>
+<a class="file" href="https://drive.google.com/drive/folders/1FuUXwMWKWWYe3xkhNiIh-hstNVUlNaYw" target="_blank" rel="noopener">
+  <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 12a3 3 0 0 1 3-3h10l4 5h18a3 3 0 0 1 3 3v21a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/><line x1="5" y1="19" x2="43" y2="19"/></svg>
+  <b>Drive 收資料夾</b><small>資料夾 · 10-25</small></a>
 </div>
 
 <h2>人</h2>
