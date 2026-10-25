@@ -42,8 +42,8 @@ ul.check input{width:20px;height:20px;margin:2px 0 0;flex:0 0 auto;accent-color:
 ul.check label{flex:1;cursor:pointer}
 ul.check .meta{display:block;font-size:12px;color:#777}
 ul.check li.on label{color:#999;text-decoration:line-through}
-.qa .q{font-weight:700;color:var(--navy)}
-.qa .a{color:#777;font-size:14px}
+ul.check .q{color:var(--ink)}
+ul.check .a{color:#777}
 .links a{display:block;padding:6px 0;border-bottom:1px dashed var(--line);text-decoration:none}
 .links a:last-child{border-bottom:0}
 .links small{color:#777;margin-left:6px}
@@ -73,7 +73,7 @@ pre .n{color:#AAA;display:inline-block;width:2.2em}
 <div class="rail">
 <div class="card"><span class="pill p-them">等對方</span><b>確認原型的點擊</b><p class="src">10-25 16:23 已給網址 · <a href="#line-13">LINE 13</a></p></div>
 <div class="card"><span class="pill p-them">等對方</span><b>上傳 17 項素材到 Drive</b><p class="src">到齊狀況見下方 · <a href="#line-13">LINE 13</a></p></div>
-<div class="card"><span class="pill p-them">等對方</span><b>答 7 題執行問題</b><p class="src">填在試算表第二分頁 · <a href="#line-13">LINE 13</a></p></div>
+<div class="card"><span class="pill p-them">等對方</span><b>答 7 題執行問題</b><p class="src">填在試算表第二分頁，見下方 Check list · <a href="#line-13">LINE 13</a></p></div>
 <div class="card"><span class="pill p-wait">等上面填完</span><b>通電話確認</b><p class="src">10-25 16:24 約定 · <a href="#line-25">LINE 25</a></p></div>
 </div>
 
@@ -97,12 +97,6 @@ pre .n{color:#AAA;display:inline-block;width:2.2em}
 <li data-k="m15"><input type="checkbox" id="m15"><label for="m15">計畫 logo 向量檔<span class="meta">06 視覺素材與 logo</span></label></li>
 <li data-k="m16"><input type="checkbox" id="m16"><label for="m16">主辦與承辦單位 logo<span class="meta">06 視覺素材與 logo</span></label></li>
 <li data-k="m17"><input type="checkbox" id="m17"><label for="m17">社群分享圖<span class="meta">06 視覺素材與 logo</span></label></li>
-</ul>
-</div>
-
-<h2>執行問題，對方答了沒</h2>
-<div class="card qa">
-<ul class="check" id="questions">
 <li data-k="q1"><input type="checkbox" id="q1"><label for="q1"><span class="q">上線日是哪一天？</span><span class="meta a">回答：（對方尚未填）</span></label></li>
 <li data-k="q2"><input type="checkbox" id="q2"><label for="q2"><span class="q">要放多久？維護要做多久？</span><span class="meta a">回答：（對方尚未填）</span></label></li>
 <li data-k="q3"><input type="checkbox" id="q3"><label for="q3"><span class="q">需要專有網址嗎？</span><span class="meta a">回答：（對方尚未填）</span></label></li>
@@ -195,11 +189,10 @@ document.querySelectorAll('ul.check').forEach(ul => {
   const doneUl = document.createElement('ul'); doneUl.className = 'check'; fold.appendChild(doneUl);
   ul.after(fold);
   const items = [...ul.querySelectorAll('li')];
-  const label = ul.id === 'questions' ? '答了' : '收到了';
   const place = () => {
     items.forEach(li => (li.querySelector('input').checked ? doneUl : ul).appendChild(li));
     const n = doneUl.children.length;
-    sum.textContent = `${label} ${n} 項，還差 ${items.length - n} 項`;
+    sum.textContent = `已勾 ${n} 項，還差 ${items.length - n} 項`;
     fold.style.display = n ? '' : 'none';
   };
   items.forEach(li => {
